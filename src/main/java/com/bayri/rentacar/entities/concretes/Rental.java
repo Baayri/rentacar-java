@@ -26,10 +26,6 @@ public class Rental {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToOne
-    @JoinColumn(name = "car_location_id")
-    private CarLocation carLocation;
-
     @Column(name = "rent_date")
 
     private Date rentDate;

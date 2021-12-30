@@ -12,6 +12,7 @@ public class CarDetailsDto {
     private int id;
     private String brandName;
     private String colorName;
+    private String carLocation;
     private String modelYear;
     private int dailyPrice;
     private String description;

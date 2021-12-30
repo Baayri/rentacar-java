@@ -44,4 +44,19 @@ public class CarController {
     public CarDetailsDto getDto(@RequestParam int id){
         return this.carService.getDto(id);
     }
+
+    @GetMapping("/getByBrandIdAndColorId")
+    public List<Car> getByBrand_IdAndColor_Id(@RequestParam int brandId, int colorId){
+        return this.carService.getByBrand_IdAndColor_Id(brandId,colorId);
+    }
+
+    @GetMapping("/getByCarLocationId")
+    public List<Car> getByCarLocation_Id(int id){
+        return this.carService.getByCarLocation_Id(id);
+    }
+
+    @GetMapping("/getLocationDto")
+    public CarDetailsDto getLocationDto(int id){
+        return this.carService.getLocationDto(id);
+    }
 }

@@ -23,7 +23,7 @@ public class CarImageController {
     }
 
     @PostMapping("/upload")
-    public Result upload(@RequestParam int carId ,@RequestParam MultipartFile carImage){
+    public Result upload( int carId ,@RequestPart MultipartFile carImage){
         return this.carImageService.upload(carId,carImage);
     }
 

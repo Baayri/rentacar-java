@@ -1,5 +1,6 @@
 package com.bayri.rentacar.entities.concretes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,5 +22,9 @@ public class CarLocation {
 
     @Column(name = "location")
     private String location;
+
+    @OneToMany(mappedBy = "carLocation")
+    @JsonIgnore
+    private List<Car> cars;
 }
 

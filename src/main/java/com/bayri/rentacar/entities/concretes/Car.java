@@ -37,6 +37,10 @@ public class Car {
     @Column(name = "description")
     private String description;
 
+    @ManyToOne
+    @JoinColumn(name = "car_location_id")
+    private CarLocation carLocation;
+
     @JsonIgnore
     @OneToMany(mappedBy = "car")
     private List<Rental> rentals;

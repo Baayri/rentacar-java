@@ -49,6 +49,21 @@ public class CarManager implements CarService {
     }
 
     @Override
+    public List<Car> getByBrand_IdAndColor_Id(int brandId, int colorId) {
+        return this.carDao.getByBrand_IdAndColor_Id(brandId,colorId);
+    }
+
+    @Override
+    public List<Car> getByCarLocation_Id(int id) {
+        return this.carDao.getByCarLocation_Id(id);
+    }
+
+    @Override
+    public CarDetailsDto getLocationDto(int id) {
+        return this.carDao.getLocationDto(id);
+    }
+
+    @Override
     public Car getById(int id) {
         return this.carDao.getById(id);
     }

@@ -1,6 +1,8 @@
 package com.bayri.rentacar.api.controllers;
 
 import com.bayri.rentacar.business.abstracts.UserService;
+import com.bayri.rentacar.core.utilities.results.DataResult;
+import com.bayri.rentacar.core.utilities.results.Result;
 import com.bayri.rentacar.entities.concretes.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,5 +30,11 @@ public class UserController {
     @GetMapping("/getAll")
     public List<User> getAll(){
         return this.userService.getAll();
+    }
+
+
+    @GetMapping("/login")
+    public DataResult<User> login(String email , String password){
+         return this.userService.login(email,password);
     }
 }

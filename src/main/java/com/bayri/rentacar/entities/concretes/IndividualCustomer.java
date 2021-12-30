@@ -24,4 +24,7 @@ public class IndividualCustomer extends User{
 
     @Column(name = "last_name")
     private String LastName;
+
+    @Column(name = "phone_number")
+    private String phoneNumber;
 }
