@@ -9,4 +9,5 @@ public interface RentalService {
     void update(Rental rental);
     void delete(Rental rental);
     List<Rental> getAll();
+    List<Rental> getByUser_Id(int id);
 }

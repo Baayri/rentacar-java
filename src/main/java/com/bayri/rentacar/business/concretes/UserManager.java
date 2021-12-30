@@ -47,6 +47,11 @@ public class UserManager implements UserService {
     }
 
     @Override
+    public User getById(int id) {
+        return this.userDao.getById(id);
+    }
+
+    @Override
     public DataResult<User> login(String email , String password) {
         CorporateCustomer corporateCustomer = this.corporateCustomerDao.getByEmailAndPassword(email,password);
         IndividualCustomer individualCustomer= this.individualCustomerDao.getByEmailAndPassword(email,password);

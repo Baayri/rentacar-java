@@ -59,7 +59,7 @@ public class CarManager implements CarService {
     }
 
     @Override
-    public CarDetailsDto getLocationDto(int id) {
+    public List<CarDetailsDto> getLocationDto(int id) {
         return this.carDao.getLocationDto(id);
     }
 

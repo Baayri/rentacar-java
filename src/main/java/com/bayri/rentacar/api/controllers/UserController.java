@@ -37,4 +37,9 @@ public class UserController {
     public DataResult<User> login(String email , String password){
          return this.userService.login(email,password);
     }
+
+    @GetMapping("/getById")
+    public User getById(int id){
+        return this.userService.getById(id);
+    }
 }

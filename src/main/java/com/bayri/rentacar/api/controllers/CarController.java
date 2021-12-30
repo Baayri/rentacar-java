@@ -56,7 +56,7 @@ public class CarController {
     }
 
     @GetMapping("/getLocationDto")
-    public CarDetailsDto getLocationDto(int id){
+    public List<CarDetailsDto> getLocationDto(int id){
         return this.carService.getLocationDto(id);
     }
 }

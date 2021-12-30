@@ -14,6 +14,6 @@ public interface CarService {
     CarDetailsDto getDto(int id);
     List<Car> getByBrand_IdAndColor_Id(int brandId, int colorId);
     List<Car> getByCarLocation_Id(int id);
-    CarDetailsDto getLocationDto(int id);
+    List<CarDetailsDto> getLocationDto(int id);
     Car getById(int id);
 }

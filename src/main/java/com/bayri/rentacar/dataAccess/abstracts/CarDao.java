@@ -23,9 +23,10 @@ public interface CarDao extends JpaRepository<Car,Integer> {
     @Query("select new com.bayri.rentacar.entities.dtos.CarDetailsDto" +
             "(car.id , car.brand.brandName,car.color.colorName,car.carLocation.location,car.modelYear,car.dailyPrice,car.description," +
             "ci.url) from Car car left join car.carImages ci where car.carLocation.id = :id")
-    CarDetailsDto getLocationDto(int id);
+    List<CarDetailsDto> getLocationDto(int id);
 
     List<Car> getByBrand_IdAndColor_Id(int brandId,int colorId);
 
     List<Car> getByCarLocation_Id(int id);
+
 }

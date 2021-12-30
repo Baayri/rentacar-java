@@ -28,4 +28,9 @@ public class RentalController {
     public List<Rental> getAll() {
         return this.rentalService.getAll();
     }
+
+    @GetMapping("/getByUserId")
+    public List<Rental> getByUser_Id(int id){
+        return this.rentalService.getByUser_Id(id);
+    }
 }

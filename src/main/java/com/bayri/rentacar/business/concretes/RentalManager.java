@@ -36,4 +36,10 @@ public class RentalManager implements RentalService {
     public List<Rental> getAll() {
         return this.rentalDao.findAll();
     }
+
+    @Override
+    public List<Rental> getByUser_Id(int id) {
+        return this.rentalDao.getByUser_Id(id);
+    }
+
 }
